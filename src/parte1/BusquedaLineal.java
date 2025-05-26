@@ -47,17 +47,16 @@ public class BusquedaLineal {
 
 	
 	public static int[] successfulMatSearch(int[][] mat, int v) {
-		int m = mat.length;
-		int n = mat[0].length;
+		int m = mat.length; // filas
+		int n = mat[0].length; // columnas
+		//System.out.println(m + "" + n );
 		int counter = 0;
 		int[] result = { -1, -1, counter };
-		int x = mat[0].length; // columnas
-		int y = mat.length; // filas
 		boolean encontrado = false;
 	
-			for(int i = 0; i < y; i++){ // Desde la fila 0 a la 2
+			for(int i = 0; i < m; i++){ // Desde la fila 0 a la 2
 				//System.out.println("Fila: "+ i);
-				for(int j = 0; j < x; j++){//Desde columna 0 a 2 dentro de una fila i
+				for(int j = 0; j < n; j++){//Desde columna 0 a 2 dentro de una fila i
 					//System.out.println("Columna: "+ j);
 					counter++;
 					if (mat[i][j] == v ) {
